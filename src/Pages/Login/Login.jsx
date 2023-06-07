@@ -1,9 +1,10 @@
 import "./Login.css";
 
+import LoginBody from "../../Components/BodyConfig/LoginBody/LoginBody";
+
 export default function Login() {
-  return (
-    <div className="Login">
-      <></>
-    </div>
-  );
+  return;
+  <>
+    <LoginBody />
+  </>;
 }
