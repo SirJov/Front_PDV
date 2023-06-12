@@ -1,0 +1,21 @@
+.TotalCompras {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TotalCompras h3 {
+  font-size: 35px;
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  width: fit-content;
+  padding: 10px 20px;
+}
+.BoxValorTotalCompras {
+  text-align: center;
+  font-size: 70px;
+  border-radius: 5px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  min-width: 400px;
+}

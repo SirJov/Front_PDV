@@ -1,0 +1,75 @@
+.CarrinhoLista {
+  margin-top: 3px;
+  background-color: rgb(201, 213, 218);
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CarrinhoLista p {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+}
+.CarrinhoLista p:hover {
+  cursor: default;
+}
+
+.CarrinhoNomeProduto {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 300px;
+  white-space: nowrap;
+  overflow: scroll;
+  font-size: 13px;
+}
+.CarrinhoNomeProduto::-webkit-scrollbar {
+  display: none;
+}
+.CarrinhoOptTipo {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  text-align: center;
+}
+.CarrinhoOptTipo:hover {
+  cursor: pointer;
+}
+.CarrinhoOptQuantidade {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  width: 80px;
+  text-align: center;
+}
+.CarrinhoLista div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+}
+.CarrinhoLista button {
+  font-weight: bold;
+  background-color: rgb(255, 222, 216);
+  box-shadow: 2px 2px 2px rgb(78, 85, 82);
+  border: none;
+  height: 20px;
+  width: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.CarrinhoLista button:hover {
+  background-color: rgb(255, 195, 185);
+  box-shadow: 1px 1px 1px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 15.8px;
+}

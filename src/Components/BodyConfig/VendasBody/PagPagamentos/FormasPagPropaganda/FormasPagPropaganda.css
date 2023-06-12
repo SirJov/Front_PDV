@@ -1,0 +1,47 @@
+.FormasPagPropaganda {
+  margin-top: 30px;
+  display: flex;
+  height: 50vh;
+}
+.BtnFormasPag {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BtnFormasPag button {
+  background-color: rgb(230, 238, 245);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  border: none;
+  padding: 10px 0px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 25px;
+  margin-top: 30px;
+}
+
+.BtnFormasPag button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 19.8px;
+}
+.divPropaganda {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BoxPropaganda {
+  background-color: rgb(184, 118, 38);
+  width: 90%;
+  height: 90%;
+  background-color: rgb(230, 238, 245);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  border: none;
+  font-size: 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
