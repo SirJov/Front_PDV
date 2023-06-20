@@ -1,0 +1,88 @@
+.BodyPesquisa {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.BoxVendasPesquisa {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+.BoxVendasPesquisa img {
+  height: 40px;
+}
+.BoxVendasPesquisa input {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 5px;
+  outline: none;
+}
+
+.VendasPesquisaCodigo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 35px;
+}
+
+.VendasPesquisaNome {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 35px;
+}
+.VendasPesquisaNome button {
+  font-weight: bold;
+  background-color: rgb(230, 238, 245);
+  box-shadow: 2px 2px 2px rgb(78, 85, 82);
+  border: none;
+  height: 35px;
+  width: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.VendasPesquisaNome button:hover {
+  background-color: rgb(230, 238, 245);
+  box-shadow: 1px 1px 1px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 15.9px;
+}
+.BoxVendasPesquisaBtn {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.BoxVendasPesquisaBtn div {
+  border-radius: 5px 5px 0px 0px;
+  height: 35px;
+  width: 110px;
+  text-align: center;
+  padding: 5px 5px;
+  font-weight: bold;
+}
+.btnPesquisaSelected {
+  background-color: rgb(230, 238, 245);
+  border: 2px outset rgb(182, 190, 182);
+  border-bottom: none;
+}
+.btnPesquisaSelected:hover {
+  cursor: default;
+}
+
+.btnPesquisaNotSelected {
+  background-color: rgb(146, 153, 158);
+  border: 2px outset rgb(182, 190, 182);
+}
+.btnPesquisaNotSelected:hover {
+  cursor: pointer;
+}

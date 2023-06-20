@@ -9,7 +9,7 @@ export default function CardProdutoCarrinho() {
       <select className="CarrinhoOptTipo" title="Kilos ou Unidade?">
         <option value="KG">KG</option>
         <option value="UNI">UNI</option>
-      </select>
+      </select> 
       <input
         className="CarrinhoOptQuantidade"
         type="number"

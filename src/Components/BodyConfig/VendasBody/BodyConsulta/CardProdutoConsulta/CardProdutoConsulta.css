@@ -1,0 +1,45 @@
+.ConsultaLista {
+  margin-top: 3px;
+  background-color: rgb(201, 213, 218);
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ConsultaLista p {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+}
+.ConsultaLista p:hover {
+  cursor: default;
+}
+.ConsultaCodigoDeBarra {
+  background-color: aqua;
+  min-width: 15%;
+}
+.ConsultaNomeProduto {
+  background-color: aqua;
+  width: 30%;
+}
+.ConsultaEstoque {
+  background-color: aqua;
+  width: 7%;
+}
+.ConsultaValidade {
+  background-color: aqua;
+  width: 15%;
+}
+.ConsultaValorProduto {
+  background-color: aqua;
+  width: 12%;
+}
+.ConsultaCodigoEstoque {
+  background-color: aqua;
+  width: 15%;
+}

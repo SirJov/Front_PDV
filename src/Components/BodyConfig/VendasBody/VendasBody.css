@@ -5,15 +5,12 @@
   width: 100vw;
 }
 .VendasBodyBox1 {
-  background-color: rgb(238, 238, 238);
   height: 88vh;
   width: 48vw;
   border-radius: 5px;
-  box-shadow: 3px 3px 5px rgb(78, 85, 82);
 }
 .VendasBodyBox2 {
   height: 88vh;
   width: 48vw;
   border-radius: 5px;
-  
 }

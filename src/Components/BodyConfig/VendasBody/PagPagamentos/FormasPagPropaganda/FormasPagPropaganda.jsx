@@ -7,7 +7,6 @@ export default function FormasPagPropaganda() {
         <button>CARTAO</button>
         <button>PIX</button>
         <button>DINHEIRO</button>
-        <button>CONSULTA</button>
       </div>
       <div className="divPropaganda">
         <div className="BoxPropaganda">PROPAGANDA</div>

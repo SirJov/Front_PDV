@@ -20,7 +20,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 .LoginBody button:hover {
   box-shadow: 3px 3px 2px rgb(78, 85, 82);
