@@ -8,7 +8,7 @@ export default function TransaçãoFinalizar() {
           <p className="PValorPago">Valor Pago</p>
           <div>
             <p>R$</p>
-            <input type="number" placeholder="" />
+            <input name="inputTroco" type="number" placeholder="" />
           </div>
         </div>
         <div className="BoxTroco">

@@ -9,12 +9,20 @@ export default function BodyPesquisa({ setBtnSelected, classBtnPesquisa }) {
       <div className="BoxVendasPesquisa">
         <div className="VendasPesquisaCodigo">
           <img src={iconCod}></img>
-          <input type="number" placeholder="Código do produto" />
+          <input
+            id="inputCodigoPesquisa"
+            type="number"
+            placeholder="Código do produto"
+          />
         </div>
         <div className="VendasPesquisaNome">
           <img src={iconNom}></img>
-          <input type="text" placeholder="Nome do produto" />
-          <button>&#128269;</button>
+          <input
+            id="inputNomePEsquisa"
+            type="text"
+            placeholder="Nome do produto"
+          />
+          <button id="">&#128269;</button>
         </div>
       </div>
       <div className="BoxVendasPesquisaBtn">

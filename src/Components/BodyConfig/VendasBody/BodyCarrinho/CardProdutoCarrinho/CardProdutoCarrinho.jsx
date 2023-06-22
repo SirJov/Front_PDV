@@ -6,11 +6,16 @@ export default function CardProdutoCarrinho() {
       <p className="CarrinhoNomeProduto" title="Nome do produto">
         Pao de batata 50kg{" "}
       </p>
-      <select className="CarrinhoOptTipo" title="Kilos ou Unidade?">
+      <select
+        name="CarrinhoOptTipo"
+        className="CarrinhoOptTipo"
+        title="Kilos ou Unidade?"
+      >
         <option value="KG">KG</option>
         <option value="UNI">UNI</option>
-      </select> 
+      </select>
       <input
+        name="CarrinhoOptQuantidade"
         className="CarrinhoOptQuantidade"
         type="number"
         placeholder="..."
@@ -24,7 +29,9 @@ export default function CardProdutoCarrinho() {
         <p>R$</p>
         <p>333,00</p>
       </div>
-      <button title="Remover da Compra">X</button>
+      <button name="btnRemoverCompra" title="Remover da Compra">
+        X
+      </button>
     </div>
   );
 }
