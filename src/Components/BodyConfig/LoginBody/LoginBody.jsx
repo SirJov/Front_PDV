@@ -6,7 +6,7 @@ import "./LoginBody.css";
 import { useProvider } from "../../../Contexts/DataUserContext";
 
 export default function LoginBody() {
-  const { setDataUser, setIsLoged } = useProvider();
+  const { setDataUser, setIsLoged, setPage } = useProvider();
   const navigate = useNavigate();
   const Request = new RequestHandler();
   const [Email, setEmail] = useState();
@@ -22,6 +22,7 @@ export default function LoginBody() {
   }, [Email, password]);
 
   useEffect(() => {
+    setPage("Login");
     if (Token) {
       localStorage.removeItem("token");
       setIsLoged(true);

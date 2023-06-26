@@ -1,0 +1,22 @@
+.BtnsOptionsUserHeader {
+  display: flex;
+  gap: 10px;
+}
+.BtnsOptionsUserHeader p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.BtnsOptionsUserHeader button {
+  background-color: rgb(230, 238, 245);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  border: none;
+  padding: 5px 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.BtnsOptionsUserHeader button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
+  background-color: rgb(206, 215, 221);
+  cursor: pointer;
+}

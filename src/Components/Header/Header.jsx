@@ -9,8 +9,6 @@ import { useProvider } from "../../Contexts/DataUserContext";
 export default function Header() {
   const { isLoged } = useProvider();
 
-  // const object = JSON.parse(atob(DataUser.split(".")[1]));
-
   function isUser() {
     if (!isLoged) {
       return;

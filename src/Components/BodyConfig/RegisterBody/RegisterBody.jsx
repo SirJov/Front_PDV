@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import RequestHandler from "../../../Services/RequestHandler";
-
+import { useProvider } from "../../../Contexts/DataUserContext";
 import "./RegisterBody.css";
 
 export default function RegisterBody() {
+  const { setPage } = useProvider();
+  const navigate = useNavigate();
   const Request = new RequestHandler();
 
   const [Email, setEmail] = useState();
@@ -11,34 +14,50 @@ export default function RegisterBody() {
   const [cnpj, setCnpj] = useState();
   const [nome, setNome] = useState();
 
-  const [dataLogin, setDataLogin] = useState();
+  const [DataRegister, setDataRegister] = useState();
+  const [DataLogin, setDatalogin] = useState();
 
   useEffect(() => {
-    setDataLogin({
+    setPage("Registro");
+  }, []);
+
+  useEffect(() => {
+    setDataRegister({
       email: Email,
       password: password,
       document: cnpj,
       name: nome,
     });
-  }, [Email, password]);
+    setDatalogin({
+      email: Email,
+      password: password,
+    });
+  }, [Email, password, cnpj, nome]);
 
-  const EmailLogin = (event) => {
+  const EmailRegister = (event) => {
     setEmail(event.target.value);
   };
 
-  const PasswordLogin = (event) => {
+  const PasswordRegister = (event) => {
     setPassword(event.target.value);
   };
-  const CnpjLogin = (event) => {
+  const CnpjRegister = (event) => {
     setCnpj(event.target.value);
   };
-  const NomeLogin = (event) => {
+  const NomeRegister = (event) => {
     setNome(event.target.value);
   };
-  const ReqLoguin = async (event) => {
+
+  const ReqRegister = async (event) => {
     event.preventDefault();
-    const url = "https://mercado-nu.vercel.app/companies";
-    await Request.Post(url, dataLogin);
+    const urlRegister = "https://mercado-nu.vercel.app/companies";
+
+    try {
+      await Request.Post(urlRegister, DataRegister);
+      return navigate(`/Login`);
+    } catch (error) {
+      return console.log(error);
+    }
   };
 
   return (
@@ -47,29 +66,29 @@ export default function RegisterBody() {
         <input
           type="text"
           placeholder="Email"
-          onChange={EmailLogin}
+          onChange={EmailRegister}
           required
         ></input>
         <input
           type="password"
           placeholder="Senha com minimo 8 caracteres"
-          onChange={PasswordLogin}
+          onChange={PasswordRegister}
           required
         ></input>
         <input
           type="text"
           placeholder="cnpj"
-          onChange={CnpjLogin}
+          onChange={CnpjRegister}
           required
         ></input>
         <input
           type="text"
           placeholder="nome"
-          onChange={NomeLogin}
+          onChange={NomeRegister}
           required
         ></input>
 
-        <button onClick={ReqLoguin}>CADASTRAR</button>
+        <button onClick={ReqRegister}>CADASTRAR</button>
       </form>
     </div>
   );

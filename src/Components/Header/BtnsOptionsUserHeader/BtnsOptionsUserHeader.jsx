@@ -1,23 +1,11 @@
 import { useProvider } from "../../../Contexts/DataUserContext";
 import { useNavigate } from "react-router-dom";
 import "./BtnsOptionsUserHeader.css";
+import { useEffect } from "react";
 
 export default function BtnsOptionsUserHeader() {
   const { DataUser, setDataUser, isLoged, setIsLoged } = useProvider();
   const navigate = useNavigate();
-
-  if (isLoged) {
-    const dataUserLocal = localStorage.getItem("token");
-    const objectUser = JSON.parse(atob(dataUserLocal.split(".")[1]));
-    setName(objectUser.name);
-  }
-
-  function setName(i) {
-    if (i) {
-      return i;
-    }
-    return "";
-  }
 
   const ClearUserLoged = () => {
     localStorage.removeItem("token");
@@ -35,10 +23,10 @@ export default function BtnsOptionsUserHeader() {
       return <button onClick={ClearUserLoged}>Desconectart</button>;
     }
   }
-
+ 
   return (
     <div className="BtnsOptionsUserHeader">
-      <p>{setName()}</p>
+      <p>{DataUser.name}</p>
       {isLog()}
     </div>
   );

@@ -13,15 +13,22 @@ import PagUndefined from "../BodyConfig/PagUndefined/PagUndefined";
 import "./BodyConfig.css";
 
 export default function BodyConfig() {
-  const { pag, setPag } = useProvider();
+  const { DataUser, setDataUser, setPage } = useProvider();
   const navigate = useNavigate();
   const Token = localStorage.getItem("token");
 
   useEffect(() => {
+    setPage("Vendas");
     if (!Token) {
       navigate(`/Login`);
     }
-    
+    if (Token) {
+      if (!DataUser) {
+        const object = JSON.parse(atob(Token.split(".")[1]));
+        setDataUser(object);
+        return navigate(`/Vendas`);
+      }
+    }
   }, []);
 
   if (!Token) {
