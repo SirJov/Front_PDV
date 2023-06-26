@@ -21,9 +21,7 @@ export default function BodyConfig() {
     if (!Token) {
       navigate(`/Login`);
     }
-    if (Token) {
-      navigate(`/Vendas`);
-    }
+    
   }, []);
 
   if (!Token) {
