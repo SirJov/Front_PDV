@@ -8,8 +8,8 @@ import BodyConfig from "./Components/BodyConfig/BodyConfig";
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
         <BodyConfig />
       </BrowserRouter>
     </div>

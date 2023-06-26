@@ -3,13 +3,16 @@ import { Link, useNavigate } from "react-router-dom";
 import RequestHandler from "../../../Services/RequestHandler";
 
 import "./LoginBody.css";
+import { useProvider } from "../../../Contexts/DataUserContext";
 
 export default function LoginBody() {
+  const { setDataUser, setIsLoged } = useProvider();
   const navigate = useNavigate();
   const Request = new RequestHandler();
   const [Email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [dataLogin, setDataLogin] = useState();
+  const Token = localStorage.getItem("token");
 
   useEffect(() => {
     setDataLogin({
@@ -17,6 +20,13 @@ export default function LoginBody() {
       password: password,
     });
   }, [Email, password]);
+
+  useEffect(() => {
+    if (Token) {
+      localStorage.removeItem("token");
+      setIsLoged(true);
+    }
+  }, []);
 
   const EmailLogin = (event) => {
     setEmail(event.target.value);
@@ -36,6 +46,8 @@ export default function LoginBody() {
       if (res.status) {
         const object = JSON.parse(atob(res.data.split(".")[1]));
         localStorage.setItem("token", JSON.stringify(res.data));
+        setDataUser(object);
+        setIsLoged(true);
 
         if (object.userId) {
           return navigate(`/Vendas`);

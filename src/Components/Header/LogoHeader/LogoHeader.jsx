@@ -1,9 +1,14 @@
+import React from "react";
+
 import "./LogoHeader.css";
 
+
 export default function LogoHeader() {
+  
+
   return (
     <div className="LogoHeader">
-      <>LOOOOGOOOO</>
+      <p>LOGO</p>
     </div>
   );
 }
