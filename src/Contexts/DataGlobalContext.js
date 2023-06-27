@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export const UserContext = React.createContext({});
+const globalContext = React.createContext({});
 
 export const UserProvider = (props) => {
   const [DataUser, setDataUser] = useState(false);
@@ -15,12 +15,12 @@ export const UserProvider = (props) => {
   }, []);
 
   return (
-    <UserContext.Provider
+    <globalContext.Provider
       value={{ DataUser, setDataUser, page, setPage, isLoged, setIsLoged }}
     >
       {props.children}
-    </UserContext.Provider>
+    </globalContext.Provider>
   );
 };
 
-export const useProvider = () => React.useContext(UserContext); //Hook criado para dados do usuario
+export const useGlobalProvider = () => React.useContext(globalContext); //Hook criado para dados do usuario

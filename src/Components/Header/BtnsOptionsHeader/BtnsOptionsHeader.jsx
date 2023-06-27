@@ -1,10 +1,10 @@
-import { useProvider } from "../../../Contexts/DataUserContext";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 import { useNavigate } from "react-router-dom";
 import "./BtnsOptionsHeader.css";
 import { useEffect, useState } from "react";
 
 export default function BtnsOptionsHeader() {
-  const { page } = useProvider();
+  const { page } = useGlobalProvider();
   const [ClassCss, setClassCss] = useState([]);
   const navigate = useNavigate();
 

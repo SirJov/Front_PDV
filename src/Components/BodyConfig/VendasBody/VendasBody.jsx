@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
+
 import PagPagamentos from "./PagPagamentos/PagPagamentos";
 import BodyCarrinho from "./BodyCarrinho/BodyCarrinho";
 import BodyConsulta from "./BodyConsulta/BodyConsulta";
 import BodyPesquisa from "./BodyPesquisa/BodyPesquisa";
 
 import "./VendasBody.css";
-import { useProvider } from "../../../Contexts/DataUserContext";
 
 export default function VendasBody() {
-  const { setPage } = useProvider();
+  const { setPage } = useGlobalProvider();
   const [btnSelected, setBtnSelected] = useState("Carrinho");
   const [compSelected, setCompSelected] = useState();
   const [classBtnPesquisa, setClassBtnPesquisa] = useState([

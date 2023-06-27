@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import RequestHandler from "../../../Services/RequestHandler";
 
 import "./LoginBody.css";
-import { useProvider } from "../../../Contexts/DataUserContext";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 
 export default function LoginBody() {
-  const { setDataUser, setIsLoged, setPage } = useProvider();
+  const { setDataUser, setIsLoged, setPage } = useGlobalProvider();
   const navigate = useNavigate();
   const Request = new RequestHandler();
   const [Email, setEmail] = useState();

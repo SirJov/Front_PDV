@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import "./CadastroBody.css";
-import { useProvider } from "../../../Contexts/DataUserContext";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 
 export default function CadastroBody() {
-  const { setPage } = useProvider();
+  const { setPage } = useGlobalProvider();
   useEffect(() => {
     setPage("Cadastro");
   }, []);

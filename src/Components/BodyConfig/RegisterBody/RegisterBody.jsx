@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import RequestHandler from "../../../Services/RequestHandler";
-import { useProvider } from "../../../Contexts/DataUserContext";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 import "./RegisterBody.css";
 
 export default function RegisterBody() {
-  const { setPage } = useProvider();
+  const { setPage } = useGlobalProvider();
   const navigate = useNavigate();
   const Request = new RequestHandler();
 

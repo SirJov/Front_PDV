@@ -1,10 +1,10 @@
-import { useProvider } from "../../../Contexts/DataUserContext";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 import { useNavigate } from "react-router-dom";
 import "./BtnsOptionsUserHeader.css";
 import { useEffect } from "react";
 
 export default function BtnsOptionsUserHeader() {
-  const { DataUser, setDataUser, isLoged, setIsLoged } = useProvider();
+  const { DataUser, setDataUser, isLoged, setIsLoged } = useGlobalProvider();
   const navigate = useNavigate();
 
   const ClearUserLoged = () => {
@@ -23,7 +23,7 @@ export default function BtnsOptionsUserHeader() {
       return <button onClick={ClearUserLoged}>Desconectart</button>;
     }
   }
- 
+
   return (
     <div className="BtnsOptionsUserHeader">
       <p>{DataUser.name}</p>

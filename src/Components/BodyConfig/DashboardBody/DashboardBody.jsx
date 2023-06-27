@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RequestHandler from "../../../Services/RequestHandler";
+import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 
 import "./DashboardBody.css";
-import { useProvider } from "../../../Contexts/DataUserContext";
 
 export default function DashboardBody() {
-  const { setPage } = useProvider();
+  const { setPage } = useGlobalProvider();
   useEffect(() => {
     setPage("Dashboard");
   }, []);

@@ -1,6 +1,5 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useProvider } from "../../Contexts/DataUserContext";
 
 import Vendas from "../../Pages/Vendas/Vendas";
 import Login from "../../Pages/Login/Login";
@@ -11,9 +10,10 @@ import CadastroBody from "./CadastroBody/CadastroBody";
 import PagUndefined from "../BodyConfig/PagUndefined/PagUndefined";
 
 import "./BodyConfig.css";
+import { useGlobalProvider } from "../../Contexts/DataGlobalContext";
 
 export default function BodyConfig() {
-  const { DataUser, setDataUser, setPage } = useProvider();
+  const { DataUser, setDataUser, setPage } = useGlobalProvider();
   const navigate = useNavigate();
   const Token = localStorage.getItem("token");
 
