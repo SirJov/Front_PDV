@@ -5,7 +5,7 @@ import Vendas from "../../Pages/Vendas/Vendas";
 import Login from "../../Pages/Login/Login";
 import RegisterBody from "./RegisterBody/RegisterBody";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
-import CadastroBody from "./CadastroBody/CadastroBody";
+import ProdutosBody from "./ProdutosBody/ProdutosBody";
 
 import PagUndefined from "../BodyConfig/PagUndefined/PagUndefined";
 
@@ -18,15 +18,14 @@ export default function BodyConfig() {
   const Token = localStorage.getItem("token");
 
   useEffect(() => {
-    setPage("Vendas");
     if (!Token) {
       navigate(`/Login`);
     }
     if (Token) {
+      const object = JSON.parse(atob(Token.split(".")[1]));
       if (!DataUser) {
-        const object = JSON.parse(atob(Token.split(".")[1]));
         setDataUser(object);
-        return navigate(`/Vendas`);
+        return; //navigate(`/Vendas`);
       }
     }
   }, []);
@@ -43,13 +42,23 @@ export default function BodyConfig() {
   }
 
   if (Token) {
+    const object = JSON.parse(atob(Token.split(".")[1]));
+    if (object.userId) {
+      return (
+        <section className="BodyConfig">
+          <Routes>
+            <Route path="/Vendas" element={<Vendas />} />
+          </Routes>
+        </section>
+      );
+    }
     return (
       <section className="BodyConfig">
         <Routes>
           <Route path="/Login" element={<Login />} />
           <Route path="/Vendas" element={<Vendas />} />
           <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/Cadastros" element={<CadastroBody />} />
+          <Route path="/Cadastros" element={<ProdutosBody />} />
         </Routes>
       </section>
     );

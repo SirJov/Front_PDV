@@ -1,15 +1,15 @@
 import axios from "axios";
 
 class RequestHandler {
-  async Post(endPoint, data) {
+  async Post(data) {
     return await axios
-      .post(endPoint, data)
+      .request(data)
       .then((response) => {
         //console.log(response);
         return response;
       })
       .catch((error) => {
-        //console.log(error);
+        console.log(error);
         return error;
       });
   }

@@ -18,6 +18,9 @@ export default function BtnsOptionsHeader() {
     if (page == "Cadastro") {
       setClassCss(["btnDesativo", "btnAtivo", "btnDesativo"]);
     }
+    if (page == "Funcionarios") {
+      setClassCss(["btnDesativo", "btnDesativo", "btnDesativo"]);
+    }
   }, [page]);
 
   return (

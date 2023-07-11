@@ -1,7 +1,6 @@
 import { useGlobalProvider } from "../../../Contexts/DataGlobalContext";
 import { useNavigate } from "react-router-dom";
 import "./BtnsOptionsUserHeader.css";
-import { useEffect } from "react";
 
 export default function BtnsOptionsUserHeader() {
   const { DataUser, setDataUser, isLoged, setIsLoged } = useGlobalProvider();

@@ -6,7 +6,7 @@
   height: 83vh;
 }
 .ConsultaCabeçalho {
-  box-shadow: 2px 2px 4px rgb(78, 85, 82);
+  box-shadow: inset 3px 3px 5px rgb(78, 85, 82);
   background-color: rgb(166, 180, 185);
   border-radius: 5px;
   padding: 10px;

@@ -14,6 +14,11 @@ export default function Header() {
       return;
     }
     if (isLoged) {
+      const Token = localStorage.getItem("token");
+      const object = JSON.parse(atob(Token.split(".")[1]));
+      if (object.userId) {
+        return;
+      }
       return <BtnsOptionsHeader />;
     }
 

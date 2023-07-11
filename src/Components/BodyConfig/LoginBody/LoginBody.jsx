@@ -35,18 +35,23 @@ export default function LoginBody() {
 
   const PasswordLogin = (event) => {
     setPassword(event.target.value);
+    
   };
 
   const ReqLoguin = async (event) => {
     event.preventDefault();
-    const url = "https://mercado-nu.vercel.app/auth";
 
+    const reqOptions = {
+      url: "https://mercado-nu.vercel.app/auth",
+      method: "POST",
+      data: dataLogin,
+    };
     try {
-      const res = await Request.Post(url, dataLogin);
+      const res = await Request.Post(reqOptions);
 
       if (res.status) {
         const object = JSON.parse(atob(res.data.split(".")[1]));
-        localStorage.setItem("token", JSON.stringify(res.data));
+        localStorage.setItem("token", res.data);
         setDataUser(object);
         setIsLoged(true);
 

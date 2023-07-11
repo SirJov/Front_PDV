@@ -1,22 +1,23 @@
-.BtnsOptionsHeader {
-}
-
 .BtnsOptionsHeader button {
-  box-shadow: 4px 4px 4px rgb(78, 85, 82);
   border: none;
   padding: 10px 10px;
   font-size: 15px;
   border-radius: 5px;
   margin: 0px 3px;
 }
-.BtnsOptionsHeader button:hover {
-  box-shadow: 3px 3px 2px rgb(78, 85, 82);
-  background-color: rgb(212, 240, 213);
-  cursor: pointer;
-}
+
 .BtnsOptionsHeader .btnAtivo {
-  background-color: rgb(186, 252, 169);
+  box-shadow: inset 1px 1px 5px rgb(78, 85, 82);
+  background-color: rgb(245, 162, 110);
+}
+.BtnsOptionsHeader .btnAtivo:hover {
+  box-shadow: inset 1px 1px 5px rgb(78, 85, 82);
+  cursor: default;
 }
 .BtnsOptionsHeader .btnDesativo {
-  background-color: rgb(230, 238, 245);
+  background-color: rgb(157, 211, 149);
+}
+.BtnsOptionsHeader .btnDesativo:hover {
+  background-color: rgb(212, 240, 213);
+  cursor: pointer;
 }
