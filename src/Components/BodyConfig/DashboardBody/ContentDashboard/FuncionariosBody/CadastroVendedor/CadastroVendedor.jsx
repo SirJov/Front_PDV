@@ -7,7 +7,7 @@ import { useDashboardProvider } from "../../../../../../Contexts/DashboardContex
 
 export default function CadastroVendedor() {
   const { DataUser } = useGlobalProvider();
-  const { DashMsg, SetDashMsg } = useDashboardProvider();
+  const { DashMsg, SetDashMsg, GetVendedores } = useDashboardProvider();
   const Request = new RequestHandler();
 
   const [Email, setEmail] = useState();
@@ -65,6 +65,7 @@ export default function CadastroVendedor() {
         setPassword("");
         setCpf("");
         setNome("");
+        GetVendedores();
       }
     } catch (error) {
       return console.log(error);

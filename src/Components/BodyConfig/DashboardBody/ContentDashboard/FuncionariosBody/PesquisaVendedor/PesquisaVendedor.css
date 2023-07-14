@@ -1,5 +1,31 @@
 .PesquisaVendedor {
-  background-color: rgb(230, 238, 245);
   width: 70%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.topBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 162, 110);
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+  border-radius: 5px 0px 0px 5px;
+}
+.topBox p {
+  font-size: 25px;
+}
+.cardsVenderoresdashboard {
+  width: 92%;
+  height: 100%;
+  margin: 0px 50px;
+  padding: 10px;
+}
+.boxCardsVendedoresDashb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
 }

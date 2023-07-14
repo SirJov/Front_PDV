@@ -6,11 +6,15 @@ import PesquisaVendedor from "./PesquisaVendedor/PesquisaVendedor";
 import { useDashboardProvider } from "../../../../../Contexts/DashboardContext";
 
 export default function FuncionariosBody() {
-  const { SetCompSelect, SetBtnSelected } = useDashboardProvider();
+  const { SetCompSelect, SetBtnSelected, GetVendedores } =
+    useDashboardProvider();
+
   useEffect(() => {
     SetCompSelect(<FuncionariosBody />);
     SetBtnSelected("Vendedores");
+    GetVendedores();
   }, []);
+
   return (
     <div className="FuncionariosBody">
       <CadastroVendedor />

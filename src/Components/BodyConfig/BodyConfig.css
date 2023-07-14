@@ -1,5 +1,6 @@
 .BodyConfig {
-  height: 91vh;
+  padding-top: 30px;
+  height: 94vh;
   background-color: #ebf5e9;
   display: flex;
 }

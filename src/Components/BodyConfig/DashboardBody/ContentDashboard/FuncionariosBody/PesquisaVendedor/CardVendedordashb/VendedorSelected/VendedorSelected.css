@@ -1,0 +1,53 @@
+.VendedorSelected {
+  background-color: rgb(245, 162, 110);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.VendedorSelected div {
+  display: flex;
+}
+
+.cabeçalhoVendedorDashb {
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.cabeçalhoVendedorDashb p {
+  width: 280px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dadosVendedorDashb {
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+
+.dadosVendedorDashb input {
+  background-color: rgb(229, 253, 225);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  padding: 2px;
+  width: 280px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.cabeçalhoVendedorDashb,
+.dadosVendedorDashb {
+  justify-content: space-between;
+}
+
+.btnOpçoesVendedorDashb {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.btnOpçoesVendedorDashb button {
+  padding: 2px;
+  font-weight: bold;
+}
+.btnOpçoesVendedorDashb button:hover {
+  cursor: pointer;
+}

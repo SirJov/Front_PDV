@@ -1,0 +1,23 @@
+.CardVendedordashb {
+  background-color: rgb(157, 211, 149);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 3px 0px;
+}
+
+.nomeListaVend {
+  width: 250px;
+}
+
+.emailListaVend {
+  width: 310px;
+}
+.cpfListaVend {
+  width: 200px;
+}
+
+.CardVendedordashb button {
+  margin-left: 10px;
+}
