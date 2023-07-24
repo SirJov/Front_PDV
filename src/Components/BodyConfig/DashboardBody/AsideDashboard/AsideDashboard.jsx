@@ -3,6 +3,9 @@ import "./AsideDashboard.css";
 import { useGlobalProvider } from "../../../../Contexts/DataGlobalContext";
 import { useDashboardProvider } from "../../../../Contexts/DashboardContext";
 
+import { BiFace } from "react-icons/bi";
+import { BiBarChartAlt2 } from "react-icons/bi";
+
 export default function AsideDashboard() {
   const { setDataUser, setIsLoged, setPage } = useGlobalProvider();
   const { BtnSelected, SetBtnSelected, ClassBtn, SetClassBtn } =
@@ -38,6 +41,7 @@ export default function AsideDashboard() {
             seterBtn("info");
           }}
         >
+          <BiBarChartAlt2 />
           <p>Info</p>
         </div>
         <div
@@ -46,6 +50,7 @@ export default function AsideDashboard() {
             seterBtn("Vendedores");
           }}
         >
+          <BiFace />
           <p>Vendedores</p>
         </div>
       </div>

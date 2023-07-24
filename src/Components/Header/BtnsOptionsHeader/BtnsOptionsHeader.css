@@ -1,23 +1,37 @@
+.BtnsOptionsHeader {
+  background-color: rgb(243, 243, 243);
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
 .BtnsOptionsHeader button {
+  display: flex;
+  gap: 5px;
   border: none;
   padding: 10px 10px;
   font-size: 15px;
   border-radius: 5px;
   margin: 0px 3px;
+  color: rgb(77, 77, 77);
 }
 
 .BtnsOptionsHeader .btnAtivo {
-  box-shadow: inset 1px 1px 5px rgb(78, 85, 82);
-  background-color: rgb(245, 162, 110);
+  box-shadow: inset 1px 1px 10px rgb(173, 173, 173);
+  background-color: rgb(255, 255, 255);
 }
 .BtnsOptionsHeader .btnAtivo:hover {
-  box-shadow: inset 1px 1px 5px rgb(78, 85, 82);
   cursor: default;
 }
 .BtnsOptionsHeader .btnDesativo {
-  background-color: rgb(157, 211, 149);
+  color: rgb(66, 66, 66);
 }
 .BtnsOptionsHeader .btnDesativo:hover {
-  background-color: rgb(212, 240, 213);
+  text-shadow: 1px 1px 10px rgb(207, 207, 207);
+  color: rgb(0, 0, 0);
   cursor: pointer;
+}
+.iconBtnHeaderOpt {
+  font-size: 20px;
 }

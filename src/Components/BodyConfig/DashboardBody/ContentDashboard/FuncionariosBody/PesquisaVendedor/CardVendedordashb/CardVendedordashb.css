@@ -1,15 +1,15 @@
 .CardVendedordashb {
-  background-color: rgb(157, 211, 149);
+  color: rgb(77, 77, 77);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  margin: 3px 0px;
+  border-bottom: 1px solid rgb(218, 218, 218);
 }
 
 .nomeListaVend {
   width: 250px;
-}
+} 
 
 .emailListaVend {
   width: 310px;
@@ -20,4 +20,13 @@
 
 .CardVendedordashb button {
   margin-left: 10px;
+  font-size: 25px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(66, 66, 66);
+  border: none;
+}
+.CardVendedordashb button :hover {
+  text-shadow: 1px 1px 10px rgb(207, 207, 207);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }

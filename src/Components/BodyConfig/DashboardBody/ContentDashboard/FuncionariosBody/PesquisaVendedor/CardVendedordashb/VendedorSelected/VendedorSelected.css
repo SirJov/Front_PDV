@@ -1,7 +1,9 @@
 .VendedorSelected {
-  background-color: rgb(245, 162, 110);
-  padding: 5px;
-  border-radius: 5px;
+  border: 1px solid rgb(218, 218, 218);
+  background-color: rgb(248, 248, 248);
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(77, 77, 77);
 }
 
 .VendedorSelected div {
@@ -9,45 +11,60 @@
 }
 
 .cabeçalhoVendedorDashb {
-  padding: 0px 10px;
+  padding: 5px 10px;
   margin-bottom: 10px;
 }
+.cabeçalhoVendedorDashb div {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
 .cabeçalhoVendedorDashb p {
-  width: 280px;
+  width: 70px;
   text-align: center;
-  font-weight: bold;
 }
 
 .dadosVendedorDashb {
-  padding: 0px 10px;
+  padding: 5px 10px;
   margin-bottom: 10px;
 }
 
 .dadosVendedorDashb input {
-  background-color: rgb(229, 253, 225);
+  border: 1px solid rgb(218, 218, 218);
+  background-color: rgb(255, 255, 255);
   outline: none;
-  border: none;
-  border-radius: 3px;
-  padding: 2px;
+  border-radius: 6px;
+  padding: 5px;
   width: 280px;
   text-align: center;
   font-size: 15px;
 }
 
-.cabeçalhoVendedorDashb,
 .dadosVendedorDashb {
   justify-content: space-between;
 }
 
 .btnOpçoesVendedorDashb {
+  margin: 10px 0px;
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 .btnOpçoesVendedorDashb button {
-  padding: 2px;
-  font-weight: bold;
+  color: rgb(77, 77, 77);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 18px;
+}
+.iconVendSelected {
+  font-size: 20px;
 }
 .btnOpçoesVendedorDashb button:hover {
+  background-color: rgb(218, 218, 218);
   cursor: pointer;
 }

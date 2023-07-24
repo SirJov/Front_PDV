@@ -76,6 +76,7 @@ export default function CadastroVendedor() {
     <div className="CadastroVendedor">
       <div className="BoxNovoVendedor">
         <form>
+          <h5>Cadastrar novo vendedor</h5>
           <input
             type="text"
             placeholder="Email"
@@ -105,7 +106,7 @@ export default function CadastroVendedor() {
             required
           ></input>
 
-          <button onClick={ReqRegister}>Cadastrar Vendedor</button>
+          <button onClick={ReqRegister}>Adicionar</button>
         </form>
       </div>
     </div>

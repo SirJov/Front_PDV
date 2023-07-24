@@ -2,6 +2,9 @@
   height: 100%;
   width: 10%;
   padding: 10px;
+  border-right: 1px solid rgb(218, 218, 218);
+  background-color: rgb(255, 255, 255);
+  color: rgb(77, 77, 77);
 }
 
 .AsideDashboard div {
@@ -9,23 +12,25 @@
   margin-bottom: 5px;
   border-radius: 5px;
   display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
 
 .btnAsideDashboardSelected {
-  box-shadow: inset 1px 1px 5px rgb(78, 85, 82);
-  background-color: rgb(245, 162, 110);
+  background-color: rgb(233, 233, 233);
 }
 .btnAsideDashboardSelected:hover {
   cursor: default;
 }
 .btnAsideDashboardNotSelected {
-  background-color: rgb(157, 211, 149);
+  background-color: rgb(255, 255, 255);
 }
 .btnAsideDashboardNotSelected:hover {
+  text-shadow: 1px 1px 10px rgb(207, 207, 207);
+  color: rgb(0, 0, 0);
   cursor: pointer;
-  background-color: rgb(193, 223, 194);
+  background-color: rgb(255, 255, 255);
 }
 .AsideDashboard div p {
   font-size: 18px;

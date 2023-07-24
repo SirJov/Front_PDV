@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDashboardProvider } from "../../../../../../../Contexts/DashboardContext";
+import { BiPencil } from "react-icons/bi";
+import { BiTrash } from "react-icons/bi";
 
 import VendedorSelected from "./VendedorSelected/VendedorSelected";
 import "./CardVendedordashb.css";
@@ -22,14 +24,14 @@ export default function CardVendedordashb() {
                 SetId(iten.userId);
               }}
             >
-              edit
+              <BiPencil />
             </button>
             <button
               onClick={() => {
                 SetId(iten.userId);
               }}
             >
-              X
+              <BiTrash />
             </button>
           </div>
         </div>

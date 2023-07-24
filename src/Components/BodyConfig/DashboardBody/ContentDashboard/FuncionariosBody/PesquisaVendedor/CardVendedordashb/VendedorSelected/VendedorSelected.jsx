@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./VendedorSelected.css";
 import { useDashboardProvider } from "../../../../../../../../Contexts/DashboardContext";
 
+import { BiPencil } from "react-icons/bi";
+import { BiCheckDouble } from "react-icons/bi";
+
 export default function VendedorSelected({ iten, Id, SetId }) {
   const { PutVendedores, GetVendedores } = useDashboardProvider();
   const [Email, setEmail] = useState("");
@@ -37,9 +40,10 @@ export default function VendedorSelected({ iten, Id, SetId }) {
   return (
     <div className="VendedorSelected">
       <div className="cabeçalhoVendedorDashb">
-        <p>Nome</p>
-        <p>Email</p>
-        <p>Cpf</p>
+        <div>
+          <BiPencil />
+          <p>Editar</p>
+        </div>
       </div>
       <div className="dadosVendedorDashb">
         <input type="text" value={nome} onChange={NomeRegister} />
@@ -61,6 +65,7 @@ export default function VendedorSelected({ iten, Id, SetId }) {
           }}
         >
           Atualizar
+          <BiCheckDouble className="iconVendSelected" />
         </button>
       </div>
     </div>

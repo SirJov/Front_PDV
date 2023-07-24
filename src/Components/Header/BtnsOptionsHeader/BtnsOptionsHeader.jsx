@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "./BtnsOptionsHeader.css";
 import { useEffect, useState } from "react";
 
+import { BiPieChart } from "react-icons/bi";
+import { BiTask } from "react-icons/bi";
+import { BiStoreAlt } from "react-icons/bi";
+
 export default function BtnsOptionsHeader() {
   const { page } = useGlobalProvider();
   const [ClassCss, setClassCss] = useState([]);
@@ -32,7 +36,7 @@ export default function BtnsOptionsHeader() {
           navigate("/Dashboard");
         }}
       >
-        Deashboard
+        <BiPieChart className="iconBtnHeaderOpt" /> <p>Deashboard</p>
       </button>
       <button
         className={ClassCss[1]}
@@ -41,7 +45,7 @@ export default function BtnsOptionsHeader() {
           navigate("/Cadastros");
         }}
       >
-        Cadastros
+        <BiTask className="iconBtnHeaderOpt" /> <p>Con. Estoque</p>
       </button>
       <button
         className={ClassCss[2]}
@@ -50,7 +54,7 @@ export default function BtnsOptionsHeader() {
           navigate("/Vendas");
         }}
       >
-        Vendas
+        <BiStoreAlt className="iconBtnHeaderOpt" /> <p>Vendas</p>
       </button>
     </div>
   );
